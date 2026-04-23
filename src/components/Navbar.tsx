@@ -53,7 +53,7 @@ const Navbar = () => {
           <motion.img
             src={iisalLogo}
             alt="iisal"
-            className="h-8 cursor-pointer"
+            className="h-12 cursor-pointer"
             whileHover={{ scale: 1.02 }}
           />
         </Link>

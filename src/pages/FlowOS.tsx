@@ -527,7 +527,7 @@ const DashboardSection = ({ t, isAr }: SP) => {
         {/* Header */}
         <div className="flex items-center justify-between mb-5">
           <div>
-            <h3 className="font-headline font-bold text-foreground">FlowOS Dashboard</h3>
+            <h3 className="font-headline font-bold text-foreground">iisal Dashboard</h3>
             <span className="label-tech text-[10px] text-muted-foreground">Live • Updated 2 sec ago</span>
           </div>
           <div className="flex items-center gap-2">
