@@ -81,6 +81,7 @@ const FlowOS = () => {
     >
       <Navbar />
       <HeroSection t={t} isAr={isAr} />
+      <VideoSection isAr={isAr} />
       <ProblemSection t={t} isAr={isAr} />
       <SolutionSection t={t} isAr={isAr} />
       <AutomationSection t={t} isAr={isAr} />
@@ -223,6 +224,34 @@ const HeroSection = ({ t, isAr }: SP) => {
     </section>
   );
 };
+
+/* ════════════════════════════════════════
+   SECTION 1.5 — VIDEO
+   ════════════════════════════════════════ */
+const VideoSection = ({ isAr }: { isAr: boolean }) => (
+  <S className="py-16 md:py-24">
+    <div className="max-w-4xl mx-auto px-6 md:px-12">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        className="glass-panel overflow-hidden rounded-2xl"
+        style={{ border: "1px solid hsl(var(--primary) / 0.2)" }}
+      >
+        <div className="aspect-video w-full">
+          <iframe
+            src="https://www.youtube.com/embed/ILVtTpte_84?rel=0&modestbranding=1&color=white"
+            title={isAr ? "iisal — منصة الذكاء الاصطناعي للـ CRM والأتمتة" : "iisal — AI CRM & Automation Platform"}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+      </motion.div>
+    </div>
+  </S>
+);
 
 /* ════════════════════════════════════════
    SECTION 2 — PROBLEM
